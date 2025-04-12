@@ -116,22 +116,22 @@ of [WSL or WSL
 That's because we're going to be running shell commands. You can always modify
 these commands for PowerShell if you want.
 
-#### Clone this repo anywhere you want and move into the directory:
+#### リポジトリを任意の場所にクローンして、そのディレクトリに移動します:
 
 ```sh
-git clone https://github.com/nickjj/docker-rails-example hellorails
-cd hellorails
+git clone git@github.com:aoi415/rails_test.git docker-rails-exmale
+cd docker-rails-exmale
 
 # Optionally checkout a specific tag, such as: git checkout 0.9.0
 ```
 
-#### Copy an example .env file because the real one is git ignored:
+#### .env ファイルのコピー:
 
 ```sh
 cp .env.example .env
 ```
 
-#### Build everything:
+#### Docker Build:
 
 *The first time you run this it's going to take 5-10 minutes depending on your
 internet connection speed and computer's hardware specs. That's because it's
@@ -157,7 +157,7 @@ Linux and your `uid:gid` aren't `1000:1000` (you can verify this by running
 `id`). Check out the docs in the `.env` file to customize the `UID` and `GID`
 variables to fix this.
 
-#### Setup the initial database:
+#### データベースのセットアップ:
 
 ```sh
 # You can run this from a 2nd terminal.
@@ -166,11 +166,11 @@ variables to fix this.
 
 *We'll go over that `./run` script in a bit!*
 
-#### Check it out in a browser:
+#### ブラウザで確認:
 
 Visit <http://localhost:8000> in your favorite browser.
 
-#### Formatting the code base:
+#### コードベースのフォーマット:
 
 ```sh
 # You should see that everything is unchanged (it's all already formatted).
