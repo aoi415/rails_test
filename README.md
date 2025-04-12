@@ -1,4 +1,4 @@
-#### git Tips:
+# Git Tips:
 
 ```sh
 # clone ssh
@@ -34,6 +34,9 @@ git merge development
 
 # リモートリポジトリにプッシュ
 git push origin feature/test
+
+# 不要なリモート追跡ブランチをクリーニング
+git remote prune origin
 
 # リモートに存在しないブランチを作成→プッシュまでの一連の流れ
 git checkout -b feature/hoge
