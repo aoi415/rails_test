@@ -1,3 +1,50 @@
+#### git Tips:
+
+```sh
+# clone ssh
+git clone git@github.com:aoi415/rails_test.git
+
+# 現在のブランチの確認
+git branch
+or
+git branch -a
+or
+git branch -r
+
+# branchの作成
+git checkout -b feature/test
+or
+git checkout -b feature/test origin/feature/test
+
+# branchの移動
+git checkout development
+
+# リモートリポジトリとの差分を確認
+git fetch origin
+or
+git fetch origin feature/update_readme
+or
+git fetch --all
+
+# リモートのdevelopmentの最新ソースをローカルのdevelopmentに反映
+git pull origin development
+
+# ローカルのdevelopmentブランチのソースをfeature/testブランチにマージ
+git merge development
+
+# リモートリポジトリにプッシュ
+git push origin feature/test
+
+# リモートに存在しないブランチを作成→プッシュまでの一連の流れ
+git checkout -b feature/hoge
+git add .
+git commit -m "Update hoge"
+git push -u origin feature/hoge
+# 以降は git push や git pull
+git push
+git pull
+```
+
 # An example Rails + Docker app
 
 You could use this example app as a base for your new project or as a guide to
@@ -116,22 +163,22 @@ of [WSL or WSL
 That's because we're going to be running shell commands. You can always modify
 these commands for PowerShell if you want.
 
-#### Clone this repo anywhere you want and move into the directory:
+#### リポジトリを任意の場所にクローンして、そのディレクトリに移動します:
 
 ```sh
-git clone https://github.com/nickjj/docker-rails-example hellorails
-cd hellorails
+git clone git@github.com:aoi415/rails_test.git docker-rails-exmale
+cd docker-rails-exmale
 
 # Optionally checkout a specific tag, such as: git checkout 0.9.0
 ```
 
-#### Copy an example .env file because the real one is git ignored:
+#### .env ファイルのコピー:
 
 ```sh
 cp .env.example .env
 ```
 
-#### Build everything:
+#### Docker Build:
 
 *The first time you run this it's going to take 5-10 minutes depending on your
 internet connection speed and computer's hardware specs. That's because it's
@@ -157,7 +204,7 @@ Linux and your `uid:gid` aren't `1000:1000` (you can verify this by running
 `id`). Check out the docs in the `.env` file to customize the `UID` and `GID`
 variables to fix this.
 
-#### Setup the initial database:
+#### データベースのセットアップ:
 
 ```sh
 # You can run this from a 2nd terminal.
@@ -166,11 +213,11 @@ variables to fix this.
 
 *We'll go over that `./run` script in a bit!*
 
-#### Check it out in a browser:
+#### ブラウザで確認:
 
 Visit <http://localhost:8000> in your favorite browser.
 
-#### Formatting the code base:
+#### コードベースのフォーマット:
 
 ```sh
 # You should see that everything is unchanged (it's all already formatted).
