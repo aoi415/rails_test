@@ -1,3 +1,50 @@
+#### git Tips:
+
+```sh
+# clone ssh
+git clone git@github.com:aoi415/rails_test.git
+
+# 現在のブランチの確認
+git branch
+or
+git branch -a
+or
+git branch -r
+
+# branchの作成
+git checkout -b feature/test
+or
+git checkout -b feature/test origin/feature/test
+
+# branchの移動
+git checkout development
+
+# リモートリポジトリとの差分を確認
+git fetch origin
+or
+git fetch origin feature/update_readme
+or
+git fetch --all
+
+# リモートのdevelopmentの最新ソースをローカルのdevelopmentに反映
+git pull origin development
+
+# ローカルのdevelopmentブランチのソースをfeature/testブランチにマージ
+git merge development
+
+# リモートリポジトリにプッシュ
+git push origin feature/test
+
+# リモートに存在しないブランチを作成→プッシュまでの一連の流れ
+git checkout -b feature/hoge
+git add .
+git commit -m "Update hoge"
+git push -u origin feature/hoge
+# 以降は git push や git pull
+git push
+git pull
+```
+
 # An example Rails + Docker app
 
 You could use this example app as a base for your new project or as a guide to
