@@ -1,11 +1,14 @@
 #### rails Command:
 
 ```sh
-# ※ webコンテナにてrailsコマンドを実行する
+# webコンテナに移動
+# ※railsコマンドはwebコンテナにて実行する
 docker exec -it hellorails-web-1 bash
 
 # migrate
 rails db:migrate
+
+```
 
 #### git Tips:
 
