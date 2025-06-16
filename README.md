@@ -7,6 +7,7 @@ docker exec -it hellorails-web-1 bash
 
 # migrate
 rails db:migrate
+rails db:rollback
 
 ```
 
@@ -58,6 +59,16 @@ git push -u origin feature/hoge
 # 以降は git push や git pull
 git push
 git pull
+```
+#### other:
+
+```sh
+# Rails チュートリアル
+https://railstutorial.jp/chapters/beginning?version=7.0
+
+# webコンテナが起動しない場合
+rm -f tmp/pids/server.pid
+
 ```
 
 # An example Rails + Docker app
